@@ -17,7 +17,7 @@ const Book = ({ book }) => {
         if (mounted.current) {
           setImg(image);
         }
-      }, 300);
+      }, 30);
     };
     return () => {
       mounted.current = true;

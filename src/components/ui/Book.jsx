@@ -7,22 +7,26 @@ import Price from "./Price";
 const Book = ({ book }) => {
   const [img, setImg] = useState();
 
-  const mounted = useRef(false);
+  //   const mounted = useRef(false);
 
   useEffect(() => {
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
       setTimeout(() => {
-        if (mounted.current) {
-          setImg(image);
-        }
-      }, 30);
-    };
-    return () => {
-      mounted.current = true;
+        setImg(image);
+      }, 300);
     };
   });
+  //         if (mounted.current) {
+  //           setImg(image);
+  //         }
+  //       }, 30);
+  //     };
+  //     return () => {
+  //       mounted.current = true;
+  //     };
+  //   });
 
   return (
     <div className="book">
